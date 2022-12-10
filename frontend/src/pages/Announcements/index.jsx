@@ -6,6 +6,11 @@ import "./index.css";
 function AnnouncementsPage() {
   const { socket } = useSocketContext();
   const [announcements, setAnnouncements] = useState([]);
+
+  const handleOnClickRefreshBtn = () => {
+    socket.emit("fetchAnnouncements");
+  };
+
   useEffect(() => {
     socket.emit("fetchAnnouncements");
 
@@ -13,9 +18,15 @@ function AnnouncementsPage() {
       setAnnouncements(data);
     });
   }, []);
+
   return (
-    <div>
-      <h1>Announcements</h1>
+    <>
+      <div className="announcements-header">
+        <h1>Announcements</h1>
+        <button onClick={handleOnClickRefreshBtn} className="refresh-btn">
+          Refresh announcements
+        </button>
+      </div>
       <section className="announcements-container">
         {announcements.map((announcement) => (
           <Card
@@ -33,7 +44,7 @@ function AnnouncementsPage() {
           />
         ))}
       </section>
-    </div>
+    </>
   );
 }
 

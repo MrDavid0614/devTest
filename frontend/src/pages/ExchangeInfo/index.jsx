@@ -41,7 +41,7 @@ function ExchangeInfoPage() {
   }, []);
 
   return (
-    <div className="App">
+    <>
       <h1>Exchange information page</h1>
       <section className="coin-container">
         <h2>XBTUSD</h2>
@@ -108,7 +108,7 @@ function ExchangeInfoPage() {
           </div>
         </section>
       </section>
-    </div>
+    </>
   );
 }
 
