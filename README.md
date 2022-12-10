@@ -1,5 +1,13 @@
 # Dev Test
 
+Technologies used:
+
+- ReactJS
+- NodeJS
+- WebSockets
+- Rest API
+- SQLite
+
 In order to run this project, you need to follow some few steps after clone the repo and move inside the directory:
 
 ## Run the backend:
