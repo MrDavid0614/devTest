@@ -1,0 +1,24 @@
+.coin-prices {
+  display: flex;
+  justify-content: space-evenly;
+}
+
+h1 {
+  text-align: center;
+}
+
+.coin-container {
+  margin-top: 50px;
+}
+
+h2 {
+  text-align: center;
+}
+
+h3 {
+  text-align: center;
+}
+
+td {
+  padding: 15px;
+}
