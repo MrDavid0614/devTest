@@ -23,7 +23,7 @@ client.addStream(
 );
 
 io.on("connection", (socket) => {
-  socket.on("fetchAnnouncements", async (data) => {
+  socket.on("fetchAnnouncements", async () => {
     try {
       const res = await axios.get(
         "https://www.bitmex.com/api/v1/announcement",
