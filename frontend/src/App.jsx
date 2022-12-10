@@ -1,18 +1,19 @@
+import { Link, Outlet } from "react-router-dom";
 import "./App.css";
 
-function App() {
+function Header() {
   return (
-    <header>
-      <ul className="menu">
-        <li>
-          <a href="/">Exhange Information</a>
-        </li>
-        <li>
-          <a href="announcements">Announcements</a>
-        </li>
-      </ul>
-    </header>
+    <main>
+      <header>
+        <ul className="menu">
+          <Link to="/">Exhange Information</Link>
+          <Link to="announcements">Announcements</Link>
+        </ul>
+      </header>
+
+      <Outlet />
+    </main>
   );
 }
 
-export default App;
+export default Header;
