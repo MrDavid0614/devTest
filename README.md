@@ -22,12 +22,6 @@ Being in the root directory, run this commands:
     yarn
 ```
 
-OR
-
-```bash
-    yarn install
-```
-
 ```bash
     node index.js
 ```
@@ -42,12 +36,6 @@ Being in the root directory, run this commands:
 
 ```bash
     yarn
-```
-
-OR
-
-```bash
-    yarn install
 ```
 
 ```bash
