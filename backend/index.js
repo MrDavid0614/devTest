@@ -4,6 +4,8 @@ import { Server } from "socket.io";
 import BitMEXClient from "bitmex-realtime-api";
 import axios from "axios";
 import cors from "cors";
+import AnnouncementModel from "./models/Announcement.js";
+import { Sequelize } from "sequelize";
 
 const app = express();
 const server = createServer(app);
@@ -33,9 +35,27 @@ io.on("connection", (socket) => {
       );
 
       io.emit("newAnnouncements", res.data);
+      await AnnouncementModel.bulkCreate(res.data);
     } catch (error) {
       console.error(error);
     }
+  });
+
+  socket.on("searchAnnouncement", async (searchQuery) => {
+    const result = await AnnouncementModel.findAll({
+      where: {
+        title: {
+          [Sequelize.Op.like]: `%${searchQuery}%`,
+        },
+      },
+    });
+
+    io.emit(
+      "searchResults",
+      result.map((data) => data.dataValues)
+    );
+
+    console.log(result.map((data) => data.dataValues));
   });
 });
 

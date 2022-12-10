@@ -9,7 +9,9 @@
     "bitmex-realtime-api": "^0.5.1",
     "cors": "^2.8.5",
     "express": "^4.18.2",
-    "socket.io": "^4.5.4"
+    "sequelize": "^6.26.0",
+    "socket.io": "^4.5.4",
+    "sqlite3": "^5.1.2"
   },
   "devDependencies": {
     "nodemon": "^2.0.20"
