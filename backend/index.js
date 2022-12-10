@@ -54,8 +54,6 @@ io.on("connection", (socket) => {
       "searchResults",
       result.map((data) => data.dataValues)
     );
-
-    console.log(result.map((data) => data.dataValues));
   });
 });
 
