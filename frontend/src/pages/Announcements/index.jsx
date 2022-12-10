@@ -3,16 +3,6 @@ import { useSocketContext } from "../../context/SocketContext";
 import Card from "../../components/Card";
 import "./index.css";
 
-const debounce = (cb, wait) => {
-  let timerId;
-  return (...args) => {
-    clearTimeout(timerId);
-    timerId = setTimeout(() => {
-      cb(...args);
-    }, wait);
-  };
-};
-
 function AnnouncementsPage() {
   const { socket } = useSocketContext();
   const [announcements, setAnnouncements] = useState([]);
