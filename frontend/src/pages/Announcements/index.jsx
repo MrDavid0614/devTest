@@ -42,7 +42,7 @@ function AnnouncementsPage() {
     <>
       <div className="announcements-header">
         <h1>Recent Announcements</h1>
-        <div>
+        <section className="search-section">
           <label htmlFor="searchbar">Search</label>
           <input
             value={searchQuery}
@@ -50,7 +50,7 @@ function AnnouncementsPage() {
             id="searchbar"
             onChange={(e) => setSearchQuery(e.target.value)}
           />
-        </div>
+        </section>
         <button onClick={handleOnClickRefreshBtn} className="refresh-btn">
           Refresh announcements
         </button>

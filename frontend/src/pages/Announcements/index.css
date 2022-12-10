@@ -14,6 +14,23 @@
   gap: 20px;
 }
 
+.search-section {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.search-section label {
+  font-size: 1.1rem;
+}
+
+.search-section input {
+  padding: 5px;
+  border: 1px solid rgb(155, 155, 155);
+  border-radius: 5px;
+  outline: none;
+}
+
 .refresh-btn {
   padding: 15px;
   border: none;
